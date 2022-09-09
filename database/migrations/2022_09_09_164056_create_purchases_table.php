@@ -18,7 +18,7 @@ return new class extends Migration
             $table->integer('cust_id')->unsigned();
             $table->integer('currency_code')->unsigned();
             $table->integer('user_id')->unsigned();
-            $table->decimal('amount', 12, 2);
+            $table->decimal('amount_purchased', 12, 2);
             $table->decimal('unit_price', 12, 2);
             $table->decimal('total_price', 12, 2);
             $table->foreign('cust_id')->references('cust_id')->on('customers')->onUpdate('CASCADE')->onDelete('CASCADE');
