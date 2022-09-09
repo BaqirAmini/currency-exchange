@@ -15,14 +15,14 @@ return new class extends Migration
     {
         Schema::create('customers', function (Blueprint $table) {
             $table->increments('cust_id');
-            $table->string('first_name');
-            $table->string('last_name')->nullable();
-            $table->string('father_name')->nullable();
-            $table->string('tazkira_ID')->nullable();
-            $table->string('contact_NO')->unique()->nullable();
+            $table->string('first_name', 64);
+            $table->string('last_name', 64)->nullable();
+            $table->string('father_name', 64)->nullable();
+            $table->string('tazkira_ID', 32)->nullable();
+            $table->string('contact_NO', 32)->unique()->nullable();
             $table->string('photo')->default('customer.png')->nullable();
-            $table->string('email')->unique()->index('email')->nullable();
-            $table->string('address');
+            $table->string('email', 32)->unique()->index('email')->nullable();
+            $table->string('address', 256);
             $table->timestamps();
         });
     }

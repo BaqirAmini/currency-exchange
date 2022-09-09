@@ -15,7 +15,7 @@ return new class extends Migration
     {
         Schema::create('table_currencies', function (Blueprint $table) {
             $table->increments('currency_id');
-            $table->string('currency_code', 3);
+            $table->string('currency_code', 3)->unique();
             $table->string('currency_name', 128);
             $table->timestamps();
         });
