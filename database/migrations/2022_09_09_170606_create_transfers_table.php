@@ -20,7 +20,7 @@ return new class extends Migration
             $table->integer('from_cust_id')->unsigned();
             $table->integer('to_cust_id')->unsigned();
             $table->decimal('amount_transferred', 12, 2);
-            $table->integer('status', 1)->default(0);
+            $table->integer('status')->default(0)->nullable();
             $table->foreign('currency_id')->references('currency_id')->on('currencies')->onUpdate('CASCADE')->onDelete('CASCADE');
             $table->foreign('user_id')->references('user_id')->on('users')->onUpdate('CASCADE')->onDelete('CASCADE');
             $table->foreign('from_cust_id')->references('cust_id')->on('customers')->onUpdate('CASCADE')->onDelete('CASCADE');
