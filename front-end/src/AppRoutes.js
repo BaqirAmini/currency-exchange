@@ -5,6 +5,10 @@ import Spinner from './app/shared/Spinner';
 
 const Dashboard = lazy(() => import('./dashboard/Dashboard'));
 
+/*--------------------- currency-exchange sidebar elements --------------------*/
+const Customer = lazy(() => import('./components/Customer'));
+const NewCustomer = lazy(() => import('./components/NewCustomer'));
+/*---------------------/. currency-exchange sidebar elements --------------------*/
 
 
 const Buttons = lazy(() => import('./basic-ui/Buttons'));
@@ -41,8 +45,8 @@ class AppRoutes extends Component {
       <Suspense fallback={<Spinner/>}>
         <Switch>
           <Route exact path="/dashboard" component={ Dashboard } />
-
-
+          <Route path="/customers" component={ Customer } />
+          <Route path="/new-customer" component={ NewCustomer } />
           <Route path="/basic-ui/buttons" component={ Buttons } />
           <Route path="/basic-ui/dropdowns" component={ Dropdowns } />
           <Route path="/basic-ui/typography" component={ Typography } />
