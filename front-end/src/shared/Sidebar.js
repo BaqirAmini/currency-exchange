@@ -84,8 +84,8 @@ class Sidebar extends Component {
               <i className="mdi mdi-account-multiple menu-icon"></i>
             </Link>
           </li>
-          <li className={ this.isPathActive('/customers') ? 'nav-item active' : 'nav-item' }>
-            <Link className="nav-link" to="/customers">
+          <li className={ this.isPathActive('/Currencies') ? 'nav-item active' : 'nav-item' }>
+            <Link className="nav-link" to="/Currencies">
               <span className="menu-title"><Trans>Currencies</Trans></span>
               <i className="mdi mdi-currency-usd menu-icon"></i>
             </Link>

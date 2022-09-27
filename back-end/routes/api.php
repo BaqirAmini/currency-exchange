@@ -20,6 +20,9 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
 });
 
 /* ------------------- Routes --------------------- */
+# Insert customers
 Route::post('/AddCustomer', 'APIController@onCreateCustomer');
+# View customers
+Route::get('/ViewCustomers', 'APIController@onGetCustomer');
 // Route::post('/baqir', [APIController::class, 'onCreateCustomer']);
 /* -------------------/. Routes --------------------- */

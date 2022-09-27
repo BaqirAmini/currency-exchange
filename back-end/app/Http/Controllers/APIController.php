@@ -27,4 +27,18 @@ class APIController extends Controller
               return response()->json(['message' => 'fail']);
           }
       }
+
+      public function onGetCustomer()
+      {
+          $customers = Customer::all();
+          if (isset($customers)) {
+            return response()->json([
+              'customers' => $customers
+            ]);
+          } else {
+            return "not found";
+          }
+          
+          
+      }
 }
