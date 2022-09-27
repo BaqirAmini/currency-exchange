@@ -78,40 +78,16 @@ class Sidebar extends Component {
               <i className="mdi mdi-home menu-icon"></i>
             </Link>
           </li>
-          <li className={ this.isPathActive('/users') ? 'nav-item active' : 'nav-item' }>
-            <Link className="nav-link" to="/users">
-              <span className="menu-title"><Trans>Users</Trans></span>
-              <i className="mdi mdi-account-multiple-plus menu-icon"></i>
-            </Link>
-          </li>
           <li className={ this.isPathActive('/customers') ? 'nav-item active' : 'nav-item' }>
             <Link className="nav-link" to="/customers">
               <span className="menu-title"><Trans>Customers</Trans></span>
               <i className="mdi mdi-account-multiple menu-icon"></i>
             </Link>
           </li>
-          <li className={ this.isPathActive('/currencies') ? 'nav-item active' : 'nav-item' }>
-            <Link className="nav-link" to="/currencies">
+          <li className={ this.isPathActive('/customers') ? 'nav-item active' : 'nav-item' }>
+            <Link className="nav-link" to="/customers">
               <span className="menu-title"><Trans>Currencies</Trans></span>
               <i className="mdi mdi-currency-usd menu-icon"></i>
-            </Link>
-          </li>
-          <li className={ this.isPathActive('/transfers') ? 'nav-item active' : 'nav-item' }>
-            <Link className="nav-link" to="/transfers">
-              <span className="menu-title"><Trans>Transfers</Trans></span>
-              <i className="mdi mdi-transfer menu-icon"></i>
-            </Link>
-          </li>
-          <li className={ this.isPathActive('/transactions') ? 'nav-item active' : 'nav-item' }>
-            <Link className="nav-link" to="/transactions">
-              <span className="menu-title"><Trans>Transactions</Trans></span>
-              <i className="mdi mdi-cash-multiple menu-icon"></i>
-            </Link>
-          </li>
-          <li className={ this.isPathActive('/reports') ? 'nav-item active' : 'nav-item' }>
-            <Link className="nav-link" to="/reports">
-              <span className="menu-title"><Trans>Reports</Trans></span>
-              <i className="mdi mdi-chart-bar menu-icon"></i>
             </Link>
           </li>
           <li className={ this.isPathActive('/basic-ui') ? 'nav-item active' : 'nav-item' }>

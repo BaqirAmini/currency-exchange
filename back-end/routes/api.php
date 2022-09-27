@@ -1,9 +1,10 @@
 <?php
 
+use App\Http\Controllers\API\APIController;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 
-/*
+/* 
 |--------------------------------------------------------------------------
 | API Routes
 |--------------------------------------------------------------------------
@@ -17,3 +18,8 @@ use Illuminate\Support\Facades\Route;
 Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
     return $request->user();
 });
+
+/* ------------------- Routes --------------------- */
+Route::post('/AddCustomer', 'APIController@onCreateCustomer');
+// Route::post('/baqir', [APIController::class, 'onCreateCustomer']);
+/* -------------------/. Routes --------------------- */

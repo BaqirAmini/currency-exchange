@@ -11,6 +11,16 @@ class Customer extends Model
 
     protected $primaryKey = "cust_id";
     protected $table = "customers";
+    protected $fillable = [
+        'first_name',
+        'last_name',
+        'father_name',
+        'tazkira_ID',
+        'contact_NO',
+        'photo',
+        'email',
+        'address'
+    ];
 
     // A customer can make many purchases.
     public function purchase() {
