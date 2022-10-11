@@ -8,6 +8,7 @@ const Dashboard = lazy(() => import('./dashboard/Dashboard'));
 /*--------------------- currency-exchange sidebar elements --------------------*/
 const Customer = lazy(() => import('./components/Customer'));
 const NewCustomer = lazy(() => import('./components/NewCustomer'));
+const EditCustomer = lazy(() => import('./components/EditCustomer'));
 /*---------------------/. currency-exchange sidebar elements --------------------*/
 
 
@@ -47,6 +48,7 @@ class AppRoutes extends Component {
           <Route exact path="/dashboard" component={ Dashboard } />
           <Route path="/customers" component={ Customer } />
           <Route path="/new-customer" component={ NewCustomer } />
+          <Route path="/editCustomer/:cid" component={ EditCustomer } />
           <Route path="/basic-ui/buttons" component={ Buttons } />
           <Route path="/basic-ui/dropdowns" component={ Dropdowns } />
           <Route path="/basic-ui/typography" component={ Typography } />

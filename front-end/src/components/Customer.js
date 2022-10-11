@@ -38,10 +38,10 @@ export class GetCustomer extends Component {
             <td>{c.email}</td>
             <td>{c.address}</td>
             <td>
-              <Link to={`deleteCustomer/${c.cust_id}`}><i className="mdi mdi-pencil-box"></i></Link>
+              <Link to={`editCustomer/${c.cust_id}`}><i className="mdi mdi-pencil-box"></i></Link>
             </td>
             <td>
-              <Link to={`editCustomer/${c.cust_id}`}><i className="mdi mdi-delete" style={{ color: "red" }}></i></Link>
+              <Link to={`deleteCustomer/${c.cust_id}`}><i className="mdi mdi-delete" style={{ color: "red" }}></i></Link>
             </td>
           </tr>
         )

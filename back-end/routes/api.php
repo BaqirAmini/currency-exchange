@@ -24,5 +24,8 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
 Route::post('/AddCustomer', 'APIController@onCreateCustomer');
 # View customers
 Route::get('/ViewCustomers', 'APIController@onGetCustomer');
+# Update a customer
+Route::get('/editCustomer/{cid}', 'APIController@onEditCustomer');
+Route::put('/editCustomer/{cid}', 'APIController@onPostCustInfo');
 // Route::post('/baqir', [APIController::class, 'onCreateCustomer']);
 /* -------------------/. Routes --------------------- */
