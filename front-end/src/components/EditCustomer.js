@@ -2,6 +2,7 @@ import axios from "axios";
 import React, { Component } from "react";
 import { Form } from "react-bootstrap";
 import { Link } from "react-router-dom";
+import swal from "sweetalert";
 
 class EditCustomer extends Component {
 
@@ -28,7 +29,13 @@ class EditCustomer extends Component {
     const cid = this.props.match.params.cid
     const res = await axios.put(`http://localhost:8000/api/editCustomer/${cid}`, this.state);
     if (res.data.status === 200) {
-      document.getElementById('cust_update_alert').style.display = 'block';
+        swal({
+          title: "Good Job!",
+          text: "The customer has been updated successfully!",
+          icon: "success",
+          button: "OK"
+        });
+
     } else {
       console.log("Sorry, an error occured!");
     }
@@ -65,10 +72,6 @@ class EditCustomer extends Component {
           <div className="col-12 grid-margin stretch-card">
             <div className="card">
               <div className="card-body">
-                <div className="alert alert-success alert-dismissible" id="cust_update_alert" style={{ display: 'none' }}>
-                  <button type="button" className="close" data-dismiss="alert">&times;</button>
-                  <strong>Success!</strong> The customer updated successfully.
-                </div>
                 <h4 className="card-title">Edit Customers</h4>
                 <p className="card-description"> Fill in the textboxes below to add a new customer </p>
                 <form className="forms-sample" onSubmit={this.editCustomer}>
@@ -121,8 +124,8 @@ class EditCustomer extends Component {
                     <label htmlFor="address">Address</label>
                     <textarea className="form-control" name="address" value={this.state.address} onChange={this.handleInput} id="cust_address" rows="4"></textarea>
                   </Form.Group>
-                  <button type="submit" className="btn btn-gradient-primary">Edit</button>
-                  <Link to={'customers'} className="btn btn-light">
+                  <button type="submit" id="btn_update_cust" className="btn btn-gradient-primary">Update</button>
+                  <Link to={'/customers'} className="btn btn-light">
                     Cancel
                   </Link>
                 </form>
